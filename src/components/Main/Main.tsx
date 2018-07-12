@@ -11,11 +11,14 @@ import Section from "./Section/Section";
 // Component-specific style
 import "./Main.css";
 
-import Contributing from "./Contributing/Contributing";
+import Architecture from "./Architecture/Architecture";
+// import Contributing from "./Contributing/Contributing";
 import DebtOrderAPI from "./DebtOrderAPI/DebtOrderAPI";
+import DeployedAddresses from "./DeployedAddresses/DeployedAddresses";
 import Interface from "./Interface/Interface";
 import Installation from "./Introduction/Installation";
-import Upgrading from "./Upgrading/Upgrading";
+import MainConcepts from "./MainConcepts/MainConcepts";
+// import Upgrading from "./Upgrading/Upgrading";
 
 interface Props {
     documentation: Documentation;
@@ -33,7 +36,16 @@ export default class Main extends React.Component<Props, {}> {
                 <Installation/>
                 <Divider />
 
+                <MainConcepts/>
+                <Divider />
+
                 <DebtOrderAPI/>
+                <Divider />
+
+                <Architecture/>
+                <Divider />
+
+                <DeployedAddresses/>
                 <Divider />
 
                 {
@@ -52,11 +64,11 @@ export default class Main extends React.Component<Props, {}> {
                     })
                 }
 
-                <Contributing/>
-                <Divider />
+                {/*<Contributing/>*/}
+                {/*<Divider />*/}
 
-                <Upgrading/>
-                <Divider />
+                {/*<Upgrading/>*/}
+                {/*<Divider />*/}
             </Segment>
         );
     }
